@@ -42,6 +42,30 @@ h2 {
   font-size: 24px;
 }
 
+
+
+.header {
+  text-transform: uppercase;
+  font-weight: 200;
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*summary:focus {
+    background: #ede7f6;
+    outline: none;
+}*/
+
+summary:focus {
+    outline: solid;
+    outline-color: black;
+    outline-width: 1px;
+}
+
+
 iframe {
   width: 100%;
 }
@@ -137,13 +161,36 @@ p.asterix-text{
   margin-bottom: 20px
 }
 
+.members {
+  width: 100%;
+  display: flex;
+
+}
+
+.person {
+  width: 50%;
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  color: black;
+}
+
+.bio {
+  text-align: center;
+  margin: 20px;
+}
     </style>
   </head>
   <body>
     <div class="banner">
       <h1>The Purple* Party</h1>
       <p class="asterix-text"> *Name to be determined...</p>
-      <button id="sign-up" onclick="window.scrollTo(0, document.body.scrollHeight)">Sign Up</button>
+      <button id="sign-up" onclick="window.scrollTo(0, document.body.scrollHeight - 1000)">Sign Up</button>
     </div>
     <div class="platform content">
       <div class="policy">
@@ -208,13 +255,46 @@ p.asterix-text{
     </div>
 
     </div>
-    <p class="bottom-text">How will we accomplish all this? We can start by working within the current system.
-      We will begin acting as an advocacy group for these policies. We will support any candidate that holds our core values regardless
+    <p class="bottom-text">How will we accomplish all this? We can start by working within the current system. We will use the internet to
+      unify, focus and mobilize our efforts.
+      We will begin acting as an advocacy group for our policies. We will support any candidate that holds our core values regardless
       of party. They in turn will advance our shared agenda. As we grow, we will
       start to field our own candidates in local and state elections. Once we have a national infrastructure, we will start fielding federal candidates as well.</p>
 
     <p class="call-to-action"> Want to get involved? Fill out the form below and we’ll start building this together. </p>
+
+    <details >
+      <summary class="header">Who are we?</summary>
+      <div class="members">
+        <div class="person">
+          <p class="name"> Ben Chirstel</p>
+          <p class="bio"> Ben is a software developer from California and a Stanford University graduate. </p>
+        </div>
+        <div class="person">
+          <p class="name"> Alex Lerman</p>
+          <p class="bio"> Alex Lerman is a data scientist from Pennsylvania and a Stanford University graduate. </p>
+        </div>
+      </div>
+      <p style="text-align:center;">You may notice we are completely unqualified. We want to get the conversation going and recruit smart people with more experience.
+        We also think our we can use our web developement skills to organize a better, more open, more transparent party. Want to add yourself to this list? <a style="color: blue; cursor: pointer;" onclick="window.scrollTo(0, document.body.scrollHeight - 1000)">Just tell us</a></p>
+    </details>
+    <details>
+      <summary class="header">Why are we doing this?</summary>
+      <p> This past election we had the first election where both major party nominees
+        were disliked by the majority of the American public. The system for electing
+         our representatives is broken and they way we approach making policy is broken.
+          First and foremost, we want to bring a scientific approach to policy making,
+          instead of waging wars over ideology. We also believe the two party system is
+          crippling our democracy, but that there are simple, though hard to pass, changes
+          that could improve the choices and influence of the American people. </p>
+
+        <p>But why a new party?</p>
+        <p>We believe that simple messages with strong emphasises can get lost in the chaos of a large party platform that tries to
+        decide everything for their members.
+        We also beleive, fundamentally, that a party should not be a "one or the other" choice.
+        Ranked choice voting would allow voters to voice support for multiple parties, regardless of their electoral chances.</p>
+      </details>
   </div>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdboH3cFPoQ_ybmnvHU01DsS4SyxzWnDEy1kyi4BHUcPrU1zg/viewform?embedded=true" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+  <iframe id="form" src="https://docs.google.com/forms/d/e/1FAIpQLSdboH3cFPoQ_ybmnvHU01DsS4SyxzWnDEy1kyi4BHUcPrU1zg/viewform?embedded=true" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
   </body>
 </html>
