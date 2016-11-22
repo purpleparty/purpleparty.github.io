@@ -187,7 +187,7 @@ p.asterix-text{
     <div class="banner">
       <h1>The Purple* Party</h1>
       <p class="asterix-text"> *Name to be determined...</p>
-      <button onclick="window.scrollTo(0, document.body.scrollHeight - 1000)">Get Involved</button>
+      <button id="get-involved-button" onclick="window.scrollTo(0, document.body.scrollHeight - 1000)">Get Involved</button>
     </div>
 
     <div class="content">
@@ -262,7 +262,7 @@ p.asterix-text{
       of party. They in turn will advance our shared agenda. As we grow, we will
       start to field our own candidates in local and state elections. Once we have a national infrastructure, we will start fielding federal candidates as well.</p>
 
-    <p class="call-to-action"> Want to get involved?  <a style="color: blue; cursor: pointer;" onclick="window.scrollTo(0, document.body.scrollHeight - 1000)">Fill out the form</a> below and we’ll start building this together. </p>
+    <p class="call-to-action"> Want to get involved?  <a style="color: blue; cursor: pointer;" id="strategy-call-to-action">Fill out the form</a> below and we’ll start building this together. </p>
 
     <details >
       <summary class="header">Who are we?</summary>
@@ -277,7 +277,7 @@ p.asterix-text{
         </div>
       </div>
       <p style="text-align:center;">You may notice we are completely unqualified. We want to get the conversation going and recruit smart people with more experience.
-        We also think our we can use our web developement skills to organize a better, more open, more transparent party. Want to add yourself to this list? <a style="color: blue; cursor: pointer;" onclick="window.scrollTo(0, document.body.scrollHeight - 1000)">Just tell us!</a></p>
+        We also think our we can use our web developement skills to organize a better, more open, more transparent party. Want to add yourself to this list? <a style="color: blue; cursor: pointer;" id="bios-call-to-action">Just tell us!</a></p>
     </details>
     <details>
       <summary class="header">Why are we doing this?</summary>
@@ -307,6 +307,28 @@ p.asterix-text{
 
     ga('create', 'UA-70093994-2', 'auto');
     ga('send', 'pageview');
+
+    handleCallToActionClick('get-involved-button')
+    handleCallToActionClick('bios-call-to-action')
+    handleCallToActionClick('strategy-call-to-action')
+
+    function handleCallToActionClick(id) {
+      document.getElementById(id)
+        .addEventListener('click', function() {
+          scrollToBottom()
+
+          ga('send', {
+            hitType: 'event',
+            eventCategory: 'form',
+            eventAction: 'view',
+            eventLabel: id
+          });
+        })
+    }
+
+    function scrollToBottom() {
+      window.scrollTo(0, document.body.scrollHeight - 1000)
+    }
 
   </script>
 
