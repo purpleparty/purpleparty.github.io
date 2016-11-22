@@ -110,15 +110,6 @@ li > ul > li:before {
   content: '-';
 }
 
-.clearfix:after {
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
-
 button {
   border-radius: 5px;
   border: 0;
@@ -132,18 +123,6 @@ button {
   display: block;
   font-size: 18px;
   cursor: pointer;
-}
-
-.half-width-column {
-  float: left;
-  width: 50%;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-.row {
-  margin-left: -20px;
-  margin-right: -20px;
 }
 
 .policy {
@@ -180,6 +159,10 @@ p.asterix-text{
   color: black;
 }
 
+.two-columns td {
+  width: 50%;
+}
+
 .bio {
   text-align: center;
   margin: 20px;
@@ -202,60 +185,61 @@ p.asterix-text{
           <li>Meaningfully track the impact of policy through anonymized data collection</li>
         </ul>
     </div>
-    <div class="row clearfix">
 
-    <div class="half-width-column">
-      <h2><a id="Electoral_Reform_0"></a>Electoral Reform</h2>
-      <ul>
-        <li>National holiday for election day</li>
-        <li>Day-of voter registration</li>
-        <li>Ranked Choice Voting</li>
-        <li>Constitutional amendment overturning Citizens United</li>
-        <li>Campaign spending maximums</li>
-        <li>Limit the length of campaign season</li>
-        <li>Term limits for congress</li>
-        <li>Popular-vote-based Electoral College</li>
-        <li>Secure internet-based electronic voting for primaries</li>
-      </ul>
-    </div>
+    <table class="two-columns">
+      <tr>
+        <td>
+          <h2><a id="Electoral_Reform_0"></a>Electoral Reform</h2>
+          <ul>
+            <li>National holiday for election day</li>
+            <li>Day-of voter registration</li>
+            <li>Ranked Choice Voting</li>
+            <li>Constitutional amendment overturning Citizens United</li>
+            <li>Campaign spending maximums</li>
+            <li>Limit the length of campaign season</li>
+            <li>Term limits for congress</li>
+            <li>Popular-vote-based Electoral College</li>
+            <li>Secure internet-based electronic voting for primaries</li>
+          </ul>
+        </td>
+        <td>
+          <h2><a id="Justice_Reform_29"></a>Justice Reform</h2>
+          <ul>
+          <li>Decriminalization of Marijuana and pardoning and expunging of any marijuana possession crimes</li>
+          <li>Increased investment in non-lethal weaponry and training</li>
+          <li>Mandate body cameras for all police action</li>
+          <li>Demilitarization of the police force</li>
+          <li>Funding toward community building</li>
+          <li>Unified reporting system for tracking crime rates, violence, and police engagements that result in violence or arrest.</li>
+          <li>Death penalty limitations or abolishment</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h2><a id="Social_Reform_21"></a>Protecting Rights</h2>
+          <ul>
+            <li>Shut down all domestic warrantless mass surveillance operations</li>
+            <li>Expand and safeguard LGBTQ rights </li>
+            <li>Safeguard abortion rights</li>
+            <li>Access to affordable birth control</li>
+            <li>Support the right to die</li>
+          </ul>
+        </td>
+        <td>
+          <h2><a id="Science_and_Technology_39"></a>Science and Technology</h2>
+          <ul>
+          <li>Heavy investment in fundamental and experimental science</li>
+          <li>Support NASA and private space industry</li>
+          <li>Large investments in publicly available AI research</li>
+          <li>Support for Net Neutrality</li>
+          <li>Strategic support and investment for open source software</li>
+          <li>Intellectual property reform</li>
+          </ul>
+        </td>
+      </tr>
+    </table>
 
-    <div class="half-width-column">
-      <h2><a id="Justice_Reform_29"></a>Justice Reform</h2>
-      <ul>
-      <li>Decriminalization of Marijuana and pardoning and expunging of any marijuana possession crimes</li>
-      <li>Increased investment in non-lethal weaponry and training</li>
-      <li>Mandate body cameras for all police action</li>
-      <li>Demilitarization of the police force</li>
-      <li>Funding toward community building</li>
-      <li>Unified reporting system for tracking crime rates, violence, and police engagements that result in violence or arrest.</li>
-      <li>Death penalty limitations or abolishment</li>
-      </ul>
-    </div>
-
-    <div class="half-width-column">
-      <h2><a id="Social_Reform_21"></a>Protecting Rights</h2>
-      <ul>
-        <li>Shut down all domestic warrantless mass surveillance operations</li>
-        <li>Expand and safeguard LGBTQ rights </li>
-        <li>Safeguard abortion rights</li>
-        <li>Access to affordable birth control</li>
-        <li>Support the right to die</li>
-      </ul>
-    </div>
-
-    <div class="half-width-column">
-      <h2><a id="Science_and_Technology_39"></a>Science and Technology</h2>
-      <ul>
-      <li>Heavy investment in fundamental and experimental science</li>
-      <li>Support NASA and private space industry</li>
-      <li>Large investments in publicly available AI research</li>
-      <li>Support for Net Neutrality</li>
-      <li>Strategic support and investment for open source software</li>
-      <li>Intellectual property reform</li>
-      </ul>
-    </div>
-
-    </div>
     <p class="bottom-text">How will we accomplish all this? We can start by working within the current system, acting as an advocacy group for our policies. We will use the internet to
       unify, focus and mobilize our efforts. We will support any candidate that holds our core values regardless
       of party. They in turn will advance our shared agenda. As we grow, we will
